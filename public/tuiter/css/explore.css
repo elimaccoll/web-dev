@@ -1,0 +1,86 @@
+/* Search Bar */
+.wd-search-bar-container {
+    width: 85%;
+    float: left;
+}
+.wd-search-bar {
+    color: white;
+    padding-left: 30px;
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+
+}
+.wd-search-bar:focus {
+    outline: none;
+}
+.wd-search-bar::placeholder {
+    color: darkgray;
+}
+
+/* Topic Tabs */
+.wd-topic-tab-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15;
+    font-weight: bold;
+    color: rgb(124, 123, 123);
+}
+
+.wd-color-selected { color: rgb(29, 161, 242); }
+
+.wd-topic-tab {
+    text-decoration: none;
+    color:rgb(124, 123, 123);
+    padding: 16px 0px 16px 0px;
+    margin: 0px 16px;
+}
+.wd-topic-tab:hover, .wd-topic-tab-selected {
+    color: rgb(29, 161, 242);
+    border-bottom: 3px solid rgb(29, 161, 242);
+}
+
+.wd-header-divider {
+    height: 15px;
+    background-color: rgb(75, 75, 75);
+    border-top: 2px solid rgb(110, 118, 125);
+    border-bottom: 2px solid rgb(110, 118, 125);
+}
+
+/* Suggested Post */
+.wd-post-label, .wd-post-num-tuits, .wd-post-topic {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+    font-weight: bold;
+}
+.wd-post-title {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.wd-post-author {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+.wd-suggested-post {
+    padding: 16px 16px 16px 16px;
+}
+
+.wd-suggested-post-text {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.wd-post-divider {
+    border: 1px solid rgb(47, 51, 54);
+}
+
+.wd-post-image {
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 20px;
+}
