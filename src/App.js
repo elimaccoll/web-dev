@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './vendors/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css';
+import './vendors/bootstrap/cyborg/bootstrap.min.css';
+import './vendors/fontawesome/fontawesome-free-5.15.4-web/css/all.css';
 
-function App() {
+import HelloWorld from "./components/hello-world"; // no .js extension needed
+import Labs from "./components/labs";
+import Tuiter from "./components/tuiter";
+
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+function App() { // can also use const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Routes>
+          <Route path="/hello" exact={true} element={<HelloWorld/>}/>
+          <Route path="/" exact={true} element={<Labs/>}/>
+          <Route path="/tuiter/" exact={true} element={<Tuiter/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
+

@@ -1,0 +1,25 @@
+@media (min-width: 400px) {
+    .main-post-content-img {
+        min-width: 55px;
+    }
+    .who-to-follow-img {
+        min-width: 40px;
+    }
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: -10px;
+}
+
+.card-title {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.fa-search {
+    color: gray;
+}

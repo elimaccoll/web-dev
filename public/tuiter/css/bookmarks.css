@@ -1,0 +1,64 @@
+/* Bookmark Post Divider */
+.wd-bookmarked-post-divider { 
+    border-bottom: 1px solid rgb(47, 51, 54);
+}
+
+/* Bookmarks Page Header */
+.wd-header-padding {
+    padding: 12px 0px 5px 16px;
+}
+
+/* Bookmark Post */
+.wd-bookmarked-post-padding {
+    padding: 12px 16px 0px 16px;
+}
+.wd-bookmarked-post-avatar {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+}
+.wd-bookmarked-post-content-container {
+    padding-left: 12px;
+    overflow: hidden;
+    font-size: 15px;
+    max-width: 506px;
+}
+.wd-bookmarked-post-content-text {
+    padding-bottom: 12px;
+    padding-top: 5px;
+    max-width: 506px;
+}
+.wd-bookmarked-post-content-img {
+    width: 506px;
+    height: 264px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid rgb(47, 51, 54);
+}
+.wd-bookmarked-post-content-img-caption-container {
+    border: 1px solid rgb(47, 51, 54);
+    border-radius: 20px;
+    max-width: 506px;
+}
+.wd-bookmarked-post-content-img-caption {
+    padding: 12px 12px 12px 12px;
+    font-size: 15px;
+}
+.wd-bookmarked-post-content-img-title {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+/* Bookmark Icon */
+.wd-boomkarked-post-icon-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    color: rgb(124, 123, 123);
+}
+.wd-boomkarked-post-icon {
+    float: left;
+    width: 20%;
+}
