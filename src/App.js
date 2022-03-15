@@ -15,7 +15,7 @@ function App() { // can also use const App = () => {
         <Routes>
           <Route path="/hello" exact={true} element={<HelloWorld/>}/>
           <Route path="/" exact={true} element={<Labs/>}/>
-          <Route path="/tuiter/" exact={true} element={<Tuiter/>}/>
+          <Route path="/tuiter" exact={true} element={<Tuiter/>}/>
         </Routes>
       </div>
     </BrowserRouter>
