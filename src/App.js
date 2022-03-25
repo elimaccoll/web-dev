@@ -1,6 +1,7 @@
 import './vendors/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css';
 import './vendors/bootstrap/cyborg/bootstrap.min.css';
 import './vendors/fontawesome/fontawesome-free-5.15.4-web/css/all.css';
+import './vendors/fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.min.css';
 
 import HelloWorld from "./components/hello-world"; // no .js extension needed
 import Labs from "./components/labs";

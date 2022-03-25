@@ -28,17 +28,47 @@ const TuitListItem = (
         return (
             <li className="list-group-item">
                 <div className="row">
-                    <div className="col-2">
-                        <img src={tuit["avatar-image"]} className="rounded-circle img-fluid"></img>
+                    <div className="text-center col-2 d">
+                        <img src={tuit["avatar-image"]} className="img-fluid rounded-circle"></img>
                     </div>
                     <div className="col-10">
                         <div className="font-bold">
                             {tuit.postedBy.username}
+                            <span className="ms-2 text-secondary">
+                                @{tuit.handle}
+                            </span>
                         </div>
                         <div>
                             {tuit.tuit}
                         </div>
-                        <img src={tuit["attachments"]}/>
+                        {
+                            tuit.attachments && tuit.attachments.image &&
+                            <img src={tuit.attachments.image} className="img-fluid rounded"/>
+                        }
+                        {
+                            tuit.attachments && tuit.attachments.video &&
+                            <iframe width="100%" height="100%" 
+                                src={`https://www.youtube.com/embed/${tuit.attachments.video}`} 
+                                title="YouTube video player" frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen
+                                className="img-fluid rounded">
+                            </iframe>
+                        }
+                        <div className="d-flex justify-content-around">
+                            <span>
+                                <i className="fa fa-comment"></i>
+                            </span>
+                            <span>
+                                <i className="fa fa-retweet"></i>
+                            </span>
+                            <span>
+                                <i className="fa fa-heart"></i>
+                            </span>
+                            <span>
+                                <i className="fa fa-share"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </li>
