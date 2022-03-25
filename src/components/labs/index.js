@@ -9,18 +9,18 @@ import ReduxExamples from "./redux-examples";
 const Labs = () => {
     return(
         <div>
+            <Link to="hello/">
+                <h1>Hello</h1>
+            </Link>
+            <Link to="tuiter/">
+                <h1>Tuiter</h1>
+            </Link>
             <h1>Labs</h1>
             <ConditionalOutput/>
             <Styles/>
             <Classes/>
             <TodoList/>
             <ReduxExamples/>
-            <Link to="/hello">
-                Hello
-            </Link> |
-            <Link to="/tuiter/">
-                Tuiter
-            </Link>
         </div>
     )
 };

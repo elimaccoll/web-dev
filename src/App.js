@@ -18,11 +18,13 @@ const App = () => { // can also use const App = () => {
     <BrowserRouter>
       <div className="container">
         <Routes>
-          <Route index element={<Labs/>}/>
-          <Route path="hello" element={<HelloWorld/>}/>
-          <Route path="tuiter" element={<Tuiter/>}>
-            <Route index element={<HomeScreen/>}/>
-            <Route path="explore" element={<ExploreComponent/>}/>
+          <Route path="/">
+            <Route index element={<Labs/>}/>
+            <Route path="hello" element={<HelloWorld/>}/>
+            <Route path="tuiter" element={<Tuiter/>}>
+              <Route index element={<HomeScreen/>}/>
+              <Route path="explore" element={<ExploreComponent/>}/>
+            </Route>
           </Route>
         </Routes>
       </div>

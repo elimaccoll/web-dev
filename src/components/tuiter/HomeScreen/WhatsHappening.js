@@ -6,6 +6,7 @@ const WhatsHappening = () => {
     const dispatch = useDispatch();
     const tuitClickHandler = () => {
         dispatch({type: 'create-tuit', tuit: whatsHappening});
+        setWhatsHappening('');
     }
     return (
         <div className="row ms-1 mb-3">
@@ -14,7 +15,8 @@ const WhatsHappening = () => {
             </div>
             <div className='col-10'>
                 <div className='form-group'>
-                    <textarea placeholder="What's Happening?"
+                    <textarea id="tuit-text-area"
+                        placeholder="What's Happening?"
                         value={whatsHappening}
                         onChange = {(event) => setWhatsHappening(event.target.value)}
                         className="form-control bg-light text-white"/>

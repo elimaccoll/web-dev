@@ -3,19 +3,24 @@ import React from "react"
 
 const NavigationSidebar = (
     {
-        active = 'explore'
+        active = 'home'
     }) => {
+    // Updates the active tab
+    active = window.location.pathname.split('/').pop();
+    if (active === "") {
+        active = 'home'
+    }
     return (
         <div>
             <div className="list-group">
                 <a className="list-group-item" href="/">
                     <i className="fab fa-twitter"></i>
                 </a>
-                <a className={`list-group-item ${active === 'home' ? 'active' : ""}`} href="/">
+                <a className={`list-group-item ${active === 'home' ? 'active' : ""}`} href="/tuiter/">
                     <i className="fa fa-home me-2"></i> 
                     <span className="d-none d-xl-inline-block"> Home</span>
                 </a>
-                <a className={`list-group-item ${active === 'explore' ? 'active' : ""}`} href="/">
+                <a className={`list-group-item ${active === 'explore' ? 'active' : ""}`} href="/tuiter/explore">
                     <i className="fa fa-hashtag me-2"></i>
                     <span className="d-none d-xl-inline-block"> Explore</span>
                 </a>
