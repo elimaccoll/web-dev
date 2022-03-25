@@ -12,17 +12,18 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ExploreComponent from './components/tuiter/ExploreScreen/ExploreComponent';
 import HomeScreen from './components/tuiter/HomeScreen';
 
-const App = () => { // can also use const App = () => {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
         <Routes>
           <Route path="/">
             <Route index element={<Labs/>}/>
-            <Route path="hello" element={<HelloWorld/>}/>
-            <Route path="tuiter/" element={<Tuiter/>}>
+            <Route path="hello" exact={true} element={<HelloWorld/>}/>
+            <Route path="tuiter/" exact={true} element={<Tuiter/>}>
               <Route index element={<HomeScreen/>}/>
-              <Route path="explore" element={<ExploreComponent/>}/>
+              <Route path="home" exact={true} element={<ExploreComponent/>}/>
+              <Route path="explore" exact={true} element={<ExploreComponent/>}/>
             </Route>
           </Route>
         </Routes>
