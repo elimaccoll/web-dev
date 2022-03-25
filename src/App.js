@@ -9,7 +9,6 @@ import Labs from "./components/labs";
 import Tuiter from "./components/tuiter";
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ExploreScreen from './components/tuiter/ExploreScreen';
 import ExploreComponent from './components/tuiter/ExploreScreen/ExploreComponent';
 import HomeScreen from './components/tuiter/HomeScreen';
 

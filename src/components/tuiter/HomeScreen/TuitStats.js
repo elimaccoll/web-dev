@@ -8,15 +8,15 @@ const TuitStats = ({tuit}) => {
     console.log(tuit);
     return (
         <div className="row">
-            <span className="col-3">
+            <span className=" clickable-icon col-3">
                 <i className="far fa-comment me-2"></i>
                 <span>{tuit.stats.comments}</span>
             </span>
-            <span className="col-3">
+            <span className=" clickable-icon col-3">
                 <i className="fa fa-retweet me-2"></i>
                 <span>{tuit.stats.retuits}</span>
             </span>
-            <span onClick={likeTuit}  className="col-3">
+            <span onClick={likeTuit}  className="col-3 clickable-icon">
             {
                 tuit.liked &&
                 <i className="fas fa-heart me-2"
@@ -28,7 +28,7 @@ const TuitStats = ({tuit}) => {
             }
             {tuit.stats && tuit.stats.likes}
             </span>
-            <span className="col-3">
+            <span className="col-3 clickable-icon">
                 <i className="fa fa-share"></i>
             </span>
         </div>
