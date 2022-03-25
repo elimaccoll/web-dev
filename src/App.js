@@ -22,7 +22,6 @@ const App = () => {
             <Route path="hello" exact={true} element={<HelloWorld/>}/>
             <Route path="tuiter/" exact={true} element={<Tuiter/>}>
               <Route index element={<HomeScreen/>}/>
-              <Route path="home" exact={true} element={<ExploreComponent/>}/>
               <Route path="explore" exact={true} element={<ExploreComponent/>}/>
             </Route>
           </Route>
