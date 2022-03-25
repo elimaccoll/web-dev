@@ -11,3 +11,20 @@
 .post-avatar-img {
     /* max-width: 60px; */
 }
+
+.post-video {
+    min-height: 280px;
+    border-radius: 20px;
+}
+
+.fa-remove, 
+.fa-comment, 
+.fa-retweet, 
+.fa-heart, 
+.fa-share, 
+.fa-smile, 
+.fa-calendar, 
+.fa-chart-line, 
+.fa-file-image {
+    cursor: pointer;
+}

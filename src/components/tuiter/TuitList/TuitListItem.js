@@ -1,3 +1,7 @@
+import React from 'react'
+import { useDispatch } from "react-redux";
+import TuitStats from "../HomeScreen/TuitStats";
+
 const TuitListItem = (
     {
         key = 123,
@@ -25,19 +29,31 @@ const TuitListItem = (
             }
         }
     }) => {
+        const dispatch = useDispatch();
+        const deleteTuit = (tuit) => {
+            dispatch({type: 'delete-tuit', tuit});
+        };
         return (
             <li className="list-group-item">
                 <div className="row">
-                    <div className="text-center col-2 d">
+                    <div className="col-2 text-center">
                         <img src={tuit["avatar-image"]} className="img-fluid rounded-circle"></img>
                     </div>
                     <div className="col-10">
-                        <div className="font-bold">
-                            {tuit.postedBy.username}
-                            <span className="ms-2 text-secondary">
-                                @{tuit.handle}
-                            </span>
+                        <div className="d-flex justify-content-between">
+                            <div className="font-bold">
+                                {tuit.postedBy.username}
+                                <span className="ms-2 text-secondary">
+                                    @{tuit.handle}
+                                </span>
+                            </div>
+                            <div>
+                                <i className="fa fa-remove text-white"
+                                    onClick={() => {deleteTuit(tuit)}}>
+                                </i>
+                            </div>
                         </div>
+                        
                         <div>
                             {tuit.tuit}
                         </div>
@@ -52,23 +68,10 @@ const TuitListItem = (
                                 title="YouTube video player" frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen
-                                className="img-fluid rounded">
+                                className="post-video img-fluid">
                             </iframe>
                         }
-                        <div className="d-flex justify-content-around">
-                            <span>
-                                <i className="fa fa-comment"></i>
-                            </span>
-                            <span>
-                                <i className="fa fa-retweet"></i>
-                            </span>
-                            <span>
-                                <i className="fa fa-heart"></i>
-                            </span>
-                            <span>
-                                <i className="fa fa-share"></i>
-                            </span>
-                        </div>
+                        <TuitStats tuit={tuit}/>
                     </div>
                 </div>
             </li>

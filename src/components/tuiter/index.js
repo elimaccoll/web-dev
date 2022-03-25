@@ -3,9 +3,11 @@ import {Outlet} from "react-router-dom"
 import NavigationSidebar from "./NavigationSidebar";
 import WhoToFollowList from "./WhoToFollowList";
 import whoReducer from "./reducers/who-reducer";
-import {createStore} from "redux";
+import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
-const store = createStore(whoReducer);
+import tuitsReducer from "./reducers/tuits-reducer";
+const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer});
+const store = createStore(reducer);
 
 const Tuiter = () => {
     return (
